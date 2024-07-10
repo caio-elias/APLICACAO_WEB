@@ -1,4 +1,4 @@
-using Aplicao_Web.Models;
+using Aplicacao_Web.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -19,6 +19,10 @@ namespace Aplicao_Web.Controllers
         }
 
         public IActionResult Privacy()
+        {
+            return View();
+        }
+        public IActionResult Abolt()
         {
             return View();
         }
