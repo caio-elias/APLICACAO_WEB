@@ -3,11 +3,11 @@ using Aplicacao_Web.Data;
 
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<Aplicacao_WebContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("Aplicacao_WebContext") ?? throw new InvalidOperationException("Connection string 'Aplicacao_WebContext' not found.")));
-
 
 string connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<Aplicacao_WebContext>(options =>
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

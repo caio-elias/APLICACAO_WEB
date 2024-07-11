@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using Aplicacao_Web.Models;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace Aplicacao_Web.Data
 {
     public class Aplicacao_WebContext : DbContext
     {
-        public Aplicacao_WebContext (DbContextOptions<Aplicacao_WebContext> options)
+        public Aplicacao_WebContext(DbContextOptions<Aplicacao_WebContext> options)
             : base(options)
         {
         }
